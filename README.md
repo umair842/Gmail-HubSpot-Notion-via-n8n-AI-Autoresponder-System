@@ -63,7 +63,7 @@ This project demonstrates a fully automated AI-based support system for **TRT Au
     "status": "Answer found",
     "reply": "Here’s the info you requested..."
   }
-6. 🧪 Result Check
+### 6. 🧪 Result Check
 Code Node: Parses AI response JSON
 
 IF Node:
@@ -72,15 +72,13 @@ If status == Answer found → go to Step 7
 
 Else → Try secondary KB
 
-7. ✉️ Compose Draft Reply
+### 7. ✉️ Compose Draft Reply
 Set Node: Format clean message
 
 Gmail Node: Create draft
 
 Message Body:
 
-Copy
-Edit
 Hi {{name}},
 
 {{ AI-generated reply }}
@@ -90,14 +88,14 @@ TRT Australia
 Gmail Node: Add Label to Draft
 
 🔄 Fallbacks
-8. 📚 Secondary KB Search
+### 8. 📚 Secondary KB Search
 If primary KB has no answer:
 
 Query "TRT Australia Legitimacy & Trust – Private" in the same format
 
 Same Notion, AI Agent, and response logic
 
-9. 🧱 Full Page Block Merge (if both KBs fail)
+### 9. 🧱 Full Page Block Merge (if both KBs fail)
 Notion Block Node: Fetch child blocks from a Notion page
 
 Code Node: Convert all text blocks into one searchable fullText
@@ -106,7 +104,7 @@ Agent Prompt: Modified to search inside {{ fullText }} only
 
 Tools: Same as above
 
-10. 🛑 Final Fallback – Contact Not Found
+### 10. 🛑 Final Fallback – Contact Not Found
 Switch Case 2:
 
 Gmail Node: Create general info draft
@@ -119,18 +117,17 @@ Blood test info
 
 Policy and contact email
 
-🧠 AI Agent Instructions (System Message Summary)
+## 🧠 AI Agent Instructions (System Message Summary)
 Only use facts from Notion DB
 
 Never hallucinate or guess
 
 Output strict JSON format with status and reply
 
-Support markdown [Title](URL) links
 
 Return fallback message if no results
 
-⚙️ AI Tool Configuration
+## ⚙️ AI Tool Configuration
 Tool 1 – Search Notion Database
 Method: POST
 
@@ -145,7 +142,7 @@ URL: https://api.notion.com/v1/blocks/{page_id}/children
 
 Optimize Response: true
 
-🚀 Technologies Used
+##🚀 Technologies Used
 Gmail API
 
 HubSpot CRM API
@@ -156,7 +153,7 @@ OpenRouter LLMs
 
 n8n (workflow orchestration)
 
-📈 Outcomes & Use Cases
+## 📈 Outcomes & Use Cases
 Reduces manual inbox triage for TRT support staff
 
 Responds to common medical/test queries using verified data
@@ -168,9 +165,6 @@ Can scale with additional KBs and workflows
 📬 Want a Similar Setup?
 This project showcases a multi-system AI responder framework that balances automation with review control. If you're looking to implement something similar for customer support, internal QA, or product FAQs—let’s chat!
 
-python
-Copy
-Edit
 
 Let me know if you'd also like:
 - a `.md` file download
