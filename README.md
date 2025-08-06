@@ -142,7 +142,7 @@ URL: https://api.notion.com/v1/blocks/{page_id}/children
 
 Optimize Response: true
 
-##🚀 Technologies Used
+## 🚀 Technologies Used
 Gmail API
 
 HubSpot CRM API
@@ -164,11 +164,3 @@ Can scale with additional KBs and workflows
 
 📬 Want a Similar Setup?
 This project showcases a multi-system AI responder framework that balances automation with review control. If you're looking to implement something similar for customer support, internal QA, or product FAQs—let’s chat!
-
-
-Let me know if you'd also like:
-- a `.md` file download
-- a shortened version for a GitHub repo with many projects
-- or a separate section for **API credentials setup instructions**.
-
-I'm ready when you are.
